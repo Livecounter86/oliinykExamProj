@@ -1,0 +1,34 @@
+Main Page
+Elements = .//h5[text()='Elements']
+"Book Store Application" card = .//h5[text()='Book Store Application']
+
+Elements Page
+Text box = .//span[text()='Text Box']
+
+Text-box Page
+"Full name" field = .//input[@id='userName']
+"Email" field = .//input[@id='userEmail']
+"Current Address" field = .//input[@id='currentAddress']
+"Permanent Address" field = .//*[@id='permanentAddress']
+"Submit" button = .//*[@id='submit']
+
+Books Page
+Login button = .//button[@id='login']
+
+Login Page
+New user button = .//button[@id='newUser']
+"UserName" field = .//input[@id='userName']
+"Password" field = .//input[@id='password']
+"Login" button = .//button[@id='login']
+
+Registration Page
+"First Name" field = .//input[@id='firstname']
+"Last Name" field = .//input[@id='lastname']
+"UserName" field = .//input[@id='userName']
+"Password" field = .//input[@id='password']
+captcha = .//div[@class='recaptcha-checkbox-border']
+"Register" button = .//button[@id='register']
+
+Profile Page
+books list = .//div[@role='grid']
+UserName = .//label[@id='userName-value']

@@ -1,0 +1,63 @@
+TC - test case
+PrC - Pre-condition
+STR - steps to reproduce
+PoC - Post-conditions
+ER - Expected result
+
+TC 1
+Name: Submitting text in text box
+
+PrC: Open http://demoqa.com
+
+STR:
+1. Click on "Elements" card
+2. Click on "Text box" in left "Elements" panel
+3. Enter full name (for example "Tester Test Testing") into "Full Name" field
+4. Enter correct form of email into "Email" field
+5. Enter some address (Test address 15, 24) into "Current Address" field
+6. Enter some address (Test address2 27, 15 ) into "Permanent Address" field
+7. Click on "Submit" button
+
+ER:
+Text-box page
+Under fields that was submitting appears output with entered
+Name: (text that was entered in "Full Name" field)
+Email: (text that was entered in"Email" field)
+Current Address: (text that was entered in "Current Address" field)
+Permanent Address: (text that was entered in "Permanent Address" field)
+
+TC2
+Name: Registration in the book store
+
+PrC: Open http://demoqa.com
+
+STR:
+1. Click on "Book Store Application" card
+2. Click on "Login" button on top right corner of the book list
+3. Click on "New User" button
+4. Enter some first name in the field "First Name"
+5. Enter some last name in the field "Last Name"
+6. Enter some user name in the field "UserName"
+7. Enter some password in the field "Password"
+8. Set checkbox on a captcha
+9. Click on "Register" button
+
+ER:
+Alert with message "User successfuli registered" are shown
+
+TC3
+Name: Login to bookstore
+
+PrC: Open http://demoqa.com
+
+STR:
+1. Click on "Book Store Application" card
+2. Click on "Login" button on top right corner of the book list
+3. Enter user name into "UserName" field (TestOfBook)
+4. Enter some password in the field "Password" (123456Qwerty!)
+5. Click on "Login" button
+
+ER:
+Profile page
+Username of loged user are showed
+List of books are showed
