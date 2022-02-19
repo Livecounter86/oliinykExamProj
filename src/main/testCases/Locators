@@ -8,7 +8,7 @@ Text box = .//span[text()='Text Box']
 Text-box Page
 "Full name" field = .//input[@id='userName']
 "Email" field = .//input[@id='userEmail']
-"Current Address" field = .//input[@id='currentAddress']
+"Current Address" field = .//textarea[@id='currentAddress']
 "Permanent Address" field = .//*[@id='permanentAddress']
 "Submit" button = .//*[@id='submit']
 

@@ -43,7 +43,7 @@ STR:
 9. Click on "Register" button
 
 ER:
-Alert with message "User successfuli registered" are shown
+Alert with message "User successfully registered" are shown
 
 TC3
 Name: Login to bookstore
