@@ -8,9 +8,7 @@ import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.ElementsPage;
-import pages.MainPage;
-import pages.TextBoxPage;
+import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,6 +18,9 @@ public class BaseTestActions {
     protected MainPage mainPage;
     protected ElementsPage elementsPage;
     protected TextBoxPage textBoxPage;
+    protected BooksPage booksPage;
+    protected LoginPage loginPage;
+    protected RegistrationPage registrationPage;
 
     @Before
     public void startTest(){
@@ -32,13 +33,16 @@ public class BaseTestActions {
         mainPage = new MainPage(driver);
         elementsPage = new ElementsPage(driver);
         textBoxPage = new TextBoxPage(driver);
+        booksPage = new BooksPage(driver);
+        loginPage = new LoginPage(driver);
+        registrationPage = new RegistrationPage(driver);
     }
 
     @After
     public void endTest(){
 //        driver.quit();
 //        logger.info("Browser was closed");
-//        logger.info("-//-//- " + testName.getMethodName() + " test is ended -//-//-");
+        logger.info("-//-//- " + testName.getMethodName() + " test is ended -//-//-");
     }
 
     @Rule

@@ -2,6 +2,7 @@ package pages;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -48,5 +49,24 @@ abstract public class ParentPage {
     void printErrorAndStop(Exception e){
         logger.error("Can't work with element" + e);
         Assert.fail("Can't work with element" + e);
+    }
+
+    protected void checkEqualityOfText(String text, WebElement element){
+        if(element.getText().equalsIgnoreCase(text)){
+             logger.info("Text is correct in " + getElementName(element));
+        }
+        else {
+            logger.error("Text isn't correct in " + getElementName(element));
+            Assert.fail();
+        }
+    }
+
+    protected boolean checkButtonIsShown(String element){
+        try {
+            return driver.findElement(By.xpath(element)).isDisplayed();
+        }catch (Exception e){
+            printErrorAndStop(e);
+            return false;
+        }
     }
 }

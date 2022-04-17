@@ -2,14 +2,20 @@ package pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class MainPage extends ParentPage{
     @FindBy(xpath = ".//h5[text()='Elements']")
     private WebElement elementsCard;
+
+    @FindBy(xpath = ".//h5[text()='Book Store Application']")
+    private WebElement bookStoreApplicationCard;
 
 
     public MainPage(WebDriver driver) {
@@ -28,5 +34,14 @@ public class MainPage extends ParentPage{
 
     public void clickOnElementCard(){
         clickOnElement(elementsCard);
+    }
+
+    public void clickOnBookStoreCard() {
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(bookStoreApplicationCard);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", bookStoreApplicationCard);
+
+        clickOnElement(bookStoreApplicationCard);
     }
 }

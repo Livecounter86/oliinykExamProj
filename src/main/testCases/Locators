@@ -11,6 +11,10 @@ Text-box Page
 "Current Address" field = .//textarea[@id='currentAddress']
 "Permanent Address" field = .//*[@id='permanentAddress']
 "Submit" button = .//*[@id='submit']
+"Name" result field = .//p[@id="name"]
+"Email" result field = .//p[@id="email"]
+"Current Address" result field = .//p[@id="currentAddress"]
+"Permanent Address" result field = .//p[@id="permanentAddress"]
 
 Books Page
 Login button = .//button[@id='login']
