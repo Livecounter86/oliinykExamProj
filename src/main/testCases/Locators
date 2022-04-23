@@ -4,6 +4,7 @@ Elements = .//h5[text()='Elements']
 
 Elements Page
 Text box = .//span[text()='Text Box']
+Check box = .//span[text()='Check Box']
 
 Text-box Page
 "Full name" field = .//input[@id='userName']
@@ -36,3 +37,11 @@ captcha = .//div[@class='recaptcha-checkbox-border']
 Profile Page
 books list = .//div[@role='grid']
 UserName = .//label[@id='userName-value']
+
+Check Box page
+Dropdown home deck = .//button[@title='Toggle']
+checkbox Desktop deck = .//label[@for='tree-node-desktop']//span[@class='rct-checkbox']
+checkbox Notes file = .//label[@for='tree-node-notes']//span[@class='rct-checkbox']
+dropdown Desktop deck = //*[@id="tree-node"]/ol/li/ol/li[1]/span/button
+dropdown Downloads deck = //*[@id="tree-node"]/ol/li/ol/li[3]/span/button
+checkbox Word file.doc = .//label[@for='tree-node-wordFile']/span[@class='rct-checkbox']

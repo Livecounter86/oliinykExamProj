@@ -21,6 +21,7 @@ public class BaseTestActions {
     protected BooksPage booksPage;
     protected LoginPage loginPage;
     protected RegistrationPage registrationPage;
+    protected CheckBoxPage checkBoxPage;
 
     @Before
     public void startTest(){
@@ -36,6 +37,7 @@ public class BaseTestActions {
         booksPage = new BooksPage(driver);
         loginPage = new LoginPage(driver);
         registrationPage = new RegistrationPage(driver);
+        checkBoxPage = new CheckBoxPage(driver);
     }
 
     @After

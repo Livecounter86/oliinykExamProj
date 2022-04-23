@@ -27,7 +27,7 @@ Current Address: (text that was entered in "Current Address" field)
 Permanent Address: (text that was entered in "Permanent Address" field)
 
 TC2
-Name: Registration in the book store
+Name: Registration in the book store (impossible because of capch)
 
 PrC: Open http://demoqa.com
 
@@ -61,3 +61,22 @@ ER:
 Profile page
 Username of loged user are showed
 List of books are showed
+
+TC4
+Name: Work with checkboxes
+
+PrC: Open http://demoqa.com
+
+STR:
+1. Click on "Elements" card
+2. Click on "Check box" in left "Elements" panel
+3. Click on dropdown button near "Home" deck
+4. Click on checkbox near Desktop deck
+5. Click on checkbox near Notes file
+6. click on dropdown button near Downloads deck
+7. Click on checkbox Word File.doc
+
+ER:
+Step 4 - under block with Decks the text "You have selected : desktop notes commands" is shown
+Step 5 - under block with Decks the text "You have selected : commands" is shown
+Step 7 - under block with Decks the text "You have selected :" "wordFile" is shown

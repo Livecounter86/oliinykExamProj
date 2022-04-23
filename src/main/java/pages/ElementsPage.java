@@ -9,6 +9,9 @@ public class ElementsPage extends ParentPage{
     @FindBy(xpath = ".//span[text()='Text Box']")
     private WebElement textBoxLocator;
 
+    @FindBy(xpath = ".//span[text()='Check Box']")
+    private WebElement checkBoxLocator;
+
     public ElementsPage(WebDriver driver) {
         super(driver);
     }
@@ -16,5 +19,9 @@ public class ElementsPage extends ParentPage{
 
     public void clickOnTextBox() {
         clickOnElement(textBoxLocator);
+    }
+
+    public void clickOnCheckBox() {
+        clickOnElement(checkBoxLocator);
     }
 }

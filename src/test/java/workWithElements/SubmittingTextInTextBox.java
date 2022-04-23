@@ -1,4 +1,4 @@
-package workWithTextBox;
+package workWithElements;
 
 import baseTestActions.BaseTestActions;
 import org.junit.Test;
