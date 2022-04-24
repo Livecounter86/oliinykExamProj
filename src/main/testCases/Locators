@@ -1,6 +1,7 @@
 Main Page
 Elements = .//h5[text()='Elements']
 "Book Store Application" card = .//h5[text()='Book Store Application']
+Alerts, Frame&Windows card = .//h5[text()='Alerts, Frame & Windows']
 
 Elements Page
 Text box = .//span[text()='Text Box']
@@ -45,3 +46,12 @@ checkbox Notes file = .//label[@for='tree-node-notes']//span[@class='rct-checkbo
 dropdown Desktop deck = //*[@id="tree-node"]/ol/li/ol/li[1]/span/button
 dropdown Downloads deck = //*[@id="tree-node"]/ol/li/ol/li[3]/span/button
 checkbox Word file.doc = .//label[@for='tree-node-wordFile']/span[@class='rct-checkbox']
+
+Alerts, Frame & Windows page
+Alerts = .//span[text()='Alerts']
+
+Alerts page
+Button near see alert id = "alertButton"
+Button near alert 5 sec id = "timerAlertButton"
+Button near confirm box id = "confirmButton"
+Button near prompt box id = "promtButton"

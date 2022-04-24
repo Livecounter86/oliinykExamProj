@@ -80,3 +80,27 @@ ER:
 Step 4 - under block with Decks the text "You have selected : desktop notes commands" is shown
 Step 5 - under block with Decks the text "You have selected : commands" is shown
 Step 7 - under block with Decks the text "You have selected :" "wordFile" is shown
+
+TC5
+Name: Work with alerts
+
+PrC: Open http://demoqa.com
+
+STR:
+1. Click on "Alert, Frame&Windows" card
+2. Click on "Alerts" in left "Alert, Frame&Windows" panel
+3. Click on "Click me" button near "Click button to see alert"
+4. Click on "OK" button in alert window
+5. Click on "Click me" button near "On button click, alert will appear after 5 seconds"
+6. Click on "OK" button in alert window
+7. Click on "Click me" button near "On button click, confirm box will appear"
+8. Click on "OK" button in alert window
+9. Click on "Click me" button near "On button click, prompt box will appear"
+10. Enter text "test" in alert text field
+11. Click on "OK" button in alert window
+
+ER:
+3. Alert window is shown
+5. Alert window is shown after 5 sec
+8. Near "On button click, confirm box will appear" will appear text "You selected Ok"
+11. Near "On button click, prompt box will appear" will appear text "test"

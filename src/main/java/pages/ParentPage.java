@@ -24,7 +24,6 @@ abstract public class ParentPage {
         }catch (Exception e){
             printErrorAndStop(e);
         }
-
     }
 
     private String getElementName(WebElement element) {
@@ -43,7 +42,6 @@ abstract public class ParentPage {
         }catch (Exception e){
             printErrorAndStop(e);
         }
-
     }
 
     void printErrorAndStop(Exception e){
@@ -84,5 +82,14 @@ abstract public class ParentPage {
         }else {
             return false;
         }
+    }
+
+    protected void confirmingAlert(){
+        try {
+            driver.switchTo().alert().accept();
+        }catch (Exception e){
+            printErrorAndStop(e);
+        }
+
     }
 }
