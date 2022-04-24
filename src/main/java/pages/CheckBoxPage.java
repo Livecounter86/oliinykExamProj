@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,20 +10,26 @@ public class CheckBoxPage extends ParentPage{
     @FindBy(xpath = ".//button[@title='Toggle']")
     private WebElement homeDeckDropdown;
 
-    @FindBy(xpath = ".//label[@for='tree-node-desktop']//span[@class='rct-checkbox']")
+    @FindBy(xpath = ".//label[@for='tree-node-desktop']")
     private WebElement checkBoxDesktopDeck;
 
-    @FindBy(xpath = ".//label[@for='tree-node-notes']//span[@class='rct-checkbox']")
+    @FindBy(xpath = ".//label[@for='tree-node-notes']")
     private WebElement checkBoxNotesFile;
 
-    @FindBy(xpath = "//*[@id=\"tree-node\"]/ol/li/ol/li[1]/span/button")
+    @FindBy(xpath = "//*[@id='tree-node']/ol/li/ol/li[1]/span/button")
     private WebElement desktopDeckDropdown;
 
     @FindBy(xpath = "//*[@id='tree-node']/ol/li/ol/li[3]/span/button")
     private WebElement downloadsDeckDropdown;
 
-    @FindBy(xpath = ".//label[@for='tree-node-wordFile']/span[@class='rct-checkbox']")
+    @FindBy(xpath = ".//label[@for='tree-node-wordFile']")
     private WebElement checkBoxWordFile;
+
+    @FindBy(xpath = ".//span[text()='commands']")
+    private WebElement textCommands;
+
+    @FindBy(xpath = ".//span[text()='wordFile']")
+    private WebElement textWordFile;
 
     public CheckBoxPage(WebDriver driver) { super(driver); }
 
@@ -35,7 +42,12 @@ public class CheckBoxPage extends ParentPage{
     }
 
     public void clickOnCheckBoxNoteFile() {
-        clickOnElement(checkBoxNotesFile);
+        if(checkСheckBoxIsSet(checkBoxNotesFile)){
+            clickOnElement(checkBoxNotesFile);
+        }
+        else {
+            Assert.fail("Check Box isn't set");
+        }
     }
 
     public void clickOnDropdownDownloads() {
@@ -47,6 +59,15 @@ public class CheckBoxPage extends ParentPage{
     }
 
     public void clickOnCheckboxWordFile() {
-        clickOnElement(checkBoxWordFile);
+        if(checkCheckBoxNotSet(checkBoxWordFile)){
+            clickOnElement(checkBoxWordFile);
+        }else {
+            Assert.fail("Check Box is select");
+        }
+    }
+
+    public void checkOfShowingSelectedFiles() {
+        checkEqualityOfText("commands", textCommands);
+        checkEqualityOfText("wordfile", textWordFile);
     }
 }

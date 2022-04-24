@@ -16,5 +16,6 @@ public class CheckBoxSelecting extends BaseTestActions {
         checkBoxPage.clickOnCheckBoxNoteFile();
         checkBoxPage.clickOnDropdownDownloads();
         checkBoxPage.clickOnCheckboxWordFile();
+        checkBoxPage.checkOfShowingSelectedFiles();
     }
 }

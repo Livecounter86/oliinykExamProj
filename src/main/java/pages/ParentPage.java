@@ -69,4 +69,20 @@ abstract public class ParentPage {
             return false;
         }
     }
+
+    protected boolean checkСheckBoxIsSet(WebElement element){
+        if(element.isEnabled()){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    protected boolean checkCheckBoxNotSet(WebElement element){
+        if (!element.isSelected()){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }
