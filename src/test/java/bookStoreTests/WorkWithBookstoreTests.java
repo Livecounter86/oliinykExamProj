@@ -14,6 +14,20 @@ public class WorkWithBookstoreTests extends BaseTestActions {
         booksPage.enterPassword("123456Qwerty!");
         booksPage.clickOnLoginButton();
         booksPage.checkUserWasLogin("TestOfBook");
+    }
 
+    @Test
+    public void addingBookToProfile(){
+        loginToBookstore();
+        booksPage.clickOnProfileInMenu();
+        profilePage.clickOnDeleteAllBooksButton();
+        profilePage.confirmBooksDeleting();
+        profilePage.confirmAlertAboutDeletedBooks();
+        profilePage.clickOnBooksStoreMenu();
+        booksPage.clickOnBookName();
+        booksPage.clickOnAddToYourCollectionButton();
+        booksPage.checkAndConfirmAlert();
+        booksPage.clickOnProfileInMenu();
+        profilePage.checkBookWasAdded();
     }
 }

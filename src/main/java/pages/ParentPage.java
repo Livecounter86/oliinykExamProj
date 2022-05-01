@@ -59,6 +59,16 @@ abstract public class ParentPage {
         }
     }
 
+    protected void checkEqualityOfText(String text, String text2){
+        if(text2.equalsIgnoreCase(text)){
+            logger.info("Text is correct in alert");
+        }
+        else {
+            logger.error("Text isn't correct in alert");
+            Assert.fail("Text isn't correct in alert");
+        }
+    }
+
     protected boolean checkButtonIsShown(String element){
         try {
             return driver.findElement(By.xpath(element)).isDisplayed();
@@ -90,6 +100,25 @@ abstract public class ParentPage {
         }catch (Exception e){
             printErrorAndStop(e);
         }
+    }
 
+    protected String getTextFromAlert(){
+        try {
+            return driver.switchTo().alert().getText();
+        }catch (Exception e){
+            printErrorAndStop(e);
+            return "No alert";
+        }
+    }
+
+    protected boolean checkVisibilityOfElement(WebElement element){
+        if(element.isDisplayed()){
+            logger.info("Element is present " + element.getTagName());
+            return true;
+        }else {
+            logger.error("Element isn't present");
+            Assert.fail("Element isn't present");
+            return false;
+        }
     }
 }

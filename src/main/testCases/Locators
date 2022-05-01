@@ -20,6 +20,8 @@ Text-box Page
 
 Books Page
 Login button = .//button[@id='login']
+Profile = .//span[text()='Profile']
+Book store = .//span[text()='Book Store']
 
 Login Page
 New user button = .//button[@id='newUser']
@@ -27,17 +29,10 @@ New user button = .//button[@id='newUser']
 "Password" field = .//input[@id='password']
 "Login" button = .//button[@id='login']
 
-Registration Page
-"First Name" field = .//input[@id='firstname']
-"Last Name" field = .//input[@id='lastname']
-"UserName" field = .//input[@id='userName']
-"Password" field = .//input[@id='password']
-captcha = .//div[@class='recaptcha-checkbox-border']
-"Register" button = .//button[@id='register']
-
 Profile Page
 books list = .//div[@role='grid']
 UserName = .//label[@id='userName-value']
+"Delete all books" button = .//div[@class='text-right button di']/button[text()='Delete All Books']
 
 Check Box page
 Dropdown home deck = .//button[@title='Toggle']
@@ -55,3 +50,7 @@ Button near see alert id = "alertButton"
 Button near alert 5 sec id = "timerAlertButton"
 Button near confirm box id = "confirmButton"
 Button near prompt box id = "promtButton"
+
+Book Store page
+Book name in list = .//div[@class='rt-tr -odd']/div[2]//span[@class='mr-2']/a
+"Add to your collection" button = .//button[text()='Add To Your Collection']

@@ -104,3 +104,30 @@ ER:
 5. Alert window is shown after 5 sec
 8. Near "On button click, confirm box will appear" will appear text "You selected Ok"
 11. Near "On button click, prompt box will appear" will appear text "test"
+
+TC 6
+Name: Book adding to profile in Book Store
+
+PrC: Open http://demoqa.com
+
+STR:
+1. Click on "Book Store Application" card
+2. Click on "Login" button on top right corner of the book list
+3. Enter user name into "UserName" field (TestOfBook)
+4. Enter some password in the field "Password" (123456Qwerty!)
+5. Click on "Login" button
+6. Click on "Profile" in left Bookstore menu
+7. Click on "Delete all books" button
+8. Confirm deleting books in alert
+9. Confirm information alert
+10. Click on "Book store" in left book menu
+11. Click on book name in list of books
+12. Click on "Add to your collection" button
+13. Confirm alert "Book added to your collection"
+14. Click on "Profile" in left Bookstore menu
+15. Click on "Delete all books" button
+16. Confirm deleting books in alert
+17. Confirm information alert
+
+ER
+14. Book is in your profile list
