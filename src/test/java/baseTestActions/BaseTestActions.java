@@ -6,6 +6,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.TestName;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.*;
@@ -26,7 +28,7 @@ public class BaseTestActions {
     protected ProfilePage profilePage;
 
     @Before
-    public void startTest(){
+    public void startTest() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         logger.info("-//-//- " + testName.getMethodName() + " test is started -//-//-");
