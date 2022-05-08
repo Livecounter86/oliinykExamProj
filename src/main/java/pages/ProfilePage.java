@@ -23,6 +23,9 @@ public class ProfilePage extends ParentPage{
     }
 
     public void clickOnDeleteAllBooksButton() {
+        try {
+            Thread.sleep(1000);
+        }catch (Exception e){}
         clickOnElement(deleteAllBooksButton);
     }
 
@@ -31,11 +34,6 @@ public class ProfilePage extends ParentPage{
     }
 
     public void confirmAlertAboutDeletedBooks() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         confirmingAlert();
     }
 

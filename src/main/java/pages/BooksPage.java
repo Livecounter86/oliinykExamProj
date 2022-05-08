@@ -1,13 +1,9 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.concurrent.TimeUnit;
-
-public class BooksPage extends ParentPage{
+public class BooksPage extends ParentPage {
 
     @FindBy(xpath = ".//button[@id='login']")
     private WebElement loginButton;
@@ -51,8 +47,7 @@ public class BooksPage extends ParentPage{
     public void checkUserWasLogin(String login) {
         checkEqualityOfText(login, shownUserName);
         checkButtonIsShown(".//button[@id='submit']");
-        }
-
+    }
 
 
     public void clickOnProfileInMenu() {
@@ -77,15 +72,15 @@ public class BooksPage extends ParentPage{
     }
 
     public void checkAndConfirmAlert() {
+        // confirming and checking alert of adding book works only in such format
         try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            String alertMessage = getTextFromAlert();
+            logger.info("The alert message is:" + alertMessage);
+            checkEqualityOfText(alertMessage, "Book added to your collection.");
+            confirmingAlert();
+        } catch (Exception e) {
+            }
         }
-//        String alertMessage = getTextFromAlert();
-//        System.out.println(alertMessage);
-//        checkEqualityOfText(alertMessage, "Book added to your collection.");
-        confirmingAlert();
+
     }
-}
 

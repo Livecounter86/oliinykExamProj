@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 abstract public class ParentPage {
@@ -96,6 +98,8 @@ abstract public class ParentPage {
 
     protected void confirmingAlert(){
         try {
+            WebDriverWait wait = new WebDriverWait(driver, 10);
+            wait.until(ExpectedConditions.alertIsPresent());
             driver.switchTo().alert().accept();
         }catch (Exception e){
             printErrorAndStop(e);
@@ -104,6 +108,8 @@ abstract public class ParentPage {
 
     protected String getTextFromAlert(){
         try {
+            WebDriverWait wait = new WebDriverWait(driver, 10);
+            wait.until(ExpectedConditions.alertIsPresent());
             return driver.switchTo().alert().getText();
         }catch (Exception e){
             printErrorAndStop(e);

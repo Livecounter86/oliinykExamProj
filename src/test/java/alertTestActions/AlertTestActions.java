@@ -12,8 +12,8 @@ public class AlertTestActions extends BaseTestActions {
         alertPage.clickOnSideAlert();
         alertPage.clickOnSimpleAlertButton();
         alertPage.acceptSimpleAlert();
-        // alertPage.clickOnFiveSecondsDelayAlert();
-        //alertPage.acceptSimpleFiveSecAlert();
+        alertPage.clickOnFiveSecondsDelayAlert();
+        alertPage.acceptSimpleFiveSecAlert();
         alertPage.clickOnConfirmBox();
         alertPage.acceptSimpleAlert();
         alertPage.checkResultOfConfirming();
